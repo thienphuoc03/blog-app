@@ -23,13 +23,13 @@ const Header = () => {
     <header className="flex justify-between items-center w-full py-4 px-10">
       {/* logo */}
       <Link href="/">
-        <div className="w-20 overflow-hidden border-none">
+        <div className="w-24 overflow-hidden border-none">
           <Image src={logo} alt="logo" className="w-full h-auto" />
         </div>
       </Link>
 
       {/* menu */}
-      <nav className="w-max py-3 px-8 border border-solid border-dark rounded-full font-medium capitalize flex items-center fixed top-4 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm">
+      <nav className="w-max py-3 px-8 border border-solid border-dark rounded-full font-medium capitalize flex items-center fixed top-4 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-[9999]">
         {menu.map((item) => (
           <Link href={item.href} key={item.name} className="mx-2">
             {item.name}
