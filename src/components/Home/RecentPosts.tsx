@@ -23,7 +23,7 @@ const RecentPosts = ({ blogs }: any) => {
         </Link>
       </div>
 
-      <div className="grid grid-cols-3 gap-16 mt-16">
+      <div className="grid grid-cols-3 gap-16 mt-16s">
         {sortedBlogs.slice(5, 11).map((blog, index) => (
           <article className="col-span-1 row-span-1 relative" key={index}>
             <BlogLayoutThree blog={blog} />
