@@ -5,7 +5,7 @@ import { sortBlogs } from '@/utils/utils'
 
 const HomeCoverSection = ({ blogs }: any) => {
   const sortedBlogs = sortBlogs(blogs)
-  const blog = sortedBlogs[3]
+  const blog = sortedBlogs[1]
 
   return (
     <div className="w-full inline-block">

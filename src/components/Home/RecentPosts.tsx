@@ -1,7 +1,5 @@
 import { sortBlogs } from '@/utils/utils'
 import React from 'react'
-import BlogLayoutOne from '../Blog/BlogLayoutOne'
-import BlogLayoutTwo from '../Blog/BlogLayoutTwo'
 import Link from 'next/link'
 import BlogLayoutThree from '../Blog/BlogLayoutThree'
 
