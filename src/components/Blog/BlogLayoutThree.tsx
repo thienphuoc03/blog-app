@@ -3,13 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const BlogLayoutTwo = ({ blog }: any) => {
+const BlogLayoutThree = ({ blog }: any) => {
   return (
-    <div className="group grid grid-cols-12 gap-4 items-center justify-center text-dark">
-      <Link
-        href={blog?.url}
-        className="col-span-4 h-full rounded-xl overflow-hidden"
-      >
+    <div className="group flex flex-col items-center text-dark">
+      <Link href={blog?.url} className="h-full rounded-xl overflow-hidden">
         <Image
           src={blog?.image?.filePath?.replace('../public', '')}
           alt={blog?.title}
@@ -17,12 +14,12 @@ const BlogLayoutTwo = ({ blog }: any) => {
           blurDataURL={blog?.image?.blurhashDataUrl}
           width={blog?.image?.width}
           height={blog?.image?.height}
-          className="aspect-square w-full h-full object-cover object-center group-hover:scale-105 transition-all ease-linear duration-300"
+          className="aspect-[4/3] w-full h-full object-cover object-center group-hover:scale-105 transition-all ease-linear duration-300"
         />
       </Link>
 
-      <div className="col-span-8 w-full">
-        <div className="flex flex-row justify-start items-center gap-4">
+      <div className="flex flex-col mt-4 w-full">
+        <div className="flex flex-row flex-wrap justify-start items-center gap-2">
           {blog?.tags.map((tag: string) => (
             <Link
               href={`/categories/${tag}`}
@@ -49,4 +46,4 @@ const BlogLayoutTwo = ({ blog }: any) => {
   )
 }
 
-export default BlogLayoutTwo
+export default BlogLayoutThree
