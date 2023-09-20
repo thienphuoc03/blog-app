@@ -1,3 +1,4 @@
+import { slug } from 'github-slugger'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -21,11 +22,11 @@ const BlogLayoutOne = ({ blog }: any) => {
         <div className="flex flex-row justify-start items-center gap-4">
           {blog?.tags.map((tag: string) => (
             <Link
-              href={`/categories/${tag}`}
+              href={`/categories/${slug(tag)}`}
               key={tag}
               className="inline-block  bg-dark text-light rounded-full capitalize font-semibold  border-solid border-light hover:scale-105 transition-all ease-linear duration-200 px-6 text-sm py-2 !border"
             >
-              {tag}
+              {slug(tag)}
             </Link>
           ))}
         </div>

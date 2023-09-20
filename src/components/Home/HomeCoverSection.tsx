@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { sortBlogs } from '@/utils/utils'
+import { slug } from 'github-slugger'
 
 const HomeCoverSection = ({ blogs }: any) => {
   const sortedBlogs = sortBlogs(blogs)
@@ -26,11 +27,11 @@ const HomeCoverSection = ({ blogs }: any) => {
               <div className="flex flex-row justify-center items-center gap-4">
                 {blog?.tags.map((tag: string) => (
                   <Link
-                    href={`/categories/${tag}`}
+                    href={`/categories/${slug(tag)}`}
                     key={tag}
                     className="inline-block py-3 px-10 bg-dark text-light rounded-full capitalize font-semibold border-2 border-solid border-light hover:scale-105 transition-all ease-linear duration-200"
                   >
-                    {tag}
+                    {slug(tag)}
                   </Link>
                 ))}
               </div>

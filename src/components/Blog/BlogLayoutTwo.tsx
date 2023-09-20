@@ -1,4 +1,5 @@
 import { format } from 'date-fns'
+import { slug } from 'github-slugger'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -25,11 +26,11 @@ const BlogLayoutTwo = ({ blog }: any) => {
         <div className="flex flex-row justify-start items-center gap-4">
           {blog?.tags.map((tag: string) => (
             <Link
-              href={`/categories/${tag}`}
+              href={`/categories/${slug(tag)}`}
               key={tag}
               className="uppercase text-accent font-semibold text-sm"
             >
-              {tag}
+              {slug(tag)}
             </Link>
           ))}
         </div>

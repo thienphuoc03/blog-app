@@ -13,8 +13,8 @@ const BlogDetails = ({ blog, slug: blogSlug }: any) => {
 
       <div className="">{blog?.readingTime?.text}</div>
 
-      <Link href={`/categories/${blog?.slug}`} className="">
-        #{blog?.tags[0]}
+      <Link href={`/categories/${slug(blog?.slug)}`} className="">
+        #{slug(blog?.tags[0])}
       </Link>
     </div>
   )
