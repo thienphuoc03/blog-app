@@ -5,6 +5,7 @@ import linkedinIcon from './linkedin-icon.svg'
 import githubIcon from './github-icon.svg'
 import twitterIcon from './twitter-icon.svg'
 import facebookIcon from './facebook-icon.svg'
+import character from './character.png'
 
 export {
   logo,
@@ -14,4 +15,5 @@ export {
   githubIcon,
   twitterIcon,
   facebookIcon,
+  character,
 }
